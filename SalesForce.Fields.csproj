@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBF820DA-2424-41AE-9DF2-0DE254941E1A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SalesForce.Fields</RootNamespace>
+    <AssemblyName>SalesForce.Fields</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SalesForceConnector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\SalesForceConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2016.2.822.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity, Version=10.2.6602.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Telerik.Sitefinity.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Model, Version=10.2.6602.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Telerik.Sitefinity.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Services.Events, Version=10.2.6602.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Telerik.Sitefinity.Services.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Utilities, Version=10.2.6602.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Telerik.Sitefinity.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Design, Version=2017.3.913.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2017.3.913.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2017.3.913.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\SalesForceControl.cs" />
+    <Compile Include="Fields\SalesForce\AutoComplete\AutoCompleteDesigner.cs" />
+    <Compile Include="Fields\SalesForce\AutoComplete\AutoCompleteTextBox.cs" />
+    <Compile Include="Fields\SalesForce\AutoComplete\AutoCompleteTextBoxDefinition.cs" />
+    <Compile Include="Fields\SalesForce\AutoComplete\AutoCompleteTextBoxDefinitionElement.cs" />
+    <Compile Include="Fields\SalesForce\AutoComplete\IAutoCompleteTextBoxDefinition.cs" />
+    <Compile Include="Fields\SalesForce\DropDown\DropDownDesigner.cs" />
+    <Compile Include="Fields\SalesForce\TextBox\TextFieldDesigner.cs" />
+    <Compile Include="Fields\SalesForce\DropDown\IDropDownDefinition.cs" />
+    <Compile Include="Fields\SalesForce\DropDown\DropDown.cs" />
+    <Compile Include="Fields\SalesForce\DropDown\DropDownDefinition.cs" />
+    <Compile Include="Fields\SalesForce\DropDown\DropDownDefinitionElement.cs" />
+    <Compile Include="Fields\SalesForce\TextBox\FieldDefinitionElement.cs" />
+    <Compile Include="Fields\SalesForce\TextBox\IFieldDefinition.cs" />
+    <Compile Include="Fields\SalesForce\TextBox\FieldDefinition.cs" />
+    <Compile Include="Fields\SalesForce\TextBox\TextBox.cs" />
+    <Compile Include="Installer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Fields\SalesForce\TextBox\TextBox.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fields\SalesForce\TextBox\TextBox.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fields\SalesForce\TextBox\TextFieldDesigner.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fields\SalesForce\TextBox\TextFieldDesigner.js" />
+    <EmbeddedResource Include="Fields\SalesForce\DropDown\DropDown.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fields\SalesForce\DropDown\DropDown.js" />
+    <EmbeddedResource Include="Fields\SalesForce\DropDown\DropDownDesigner.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fields\SalesForce\DropDown\DropDownDesigner.js" />
+    <EmbeddedResource Include="Fields\SalesForce\AutoComplete\AutoCompleteTextBox.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fields\SalesForce\AutoComplete\AutoCompleteTextBox.js" />
+    <EmbeddedResource Include="Fields\SalesForce\AutoComplete\AutoCompleteDesigner.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fields\SalesForce\AutoComplete\AutoCompleteDesigner.js" />
+    <EmbeddedResource Include="Fields\SalesForce\AutoComplete\Style.css" />
+    <Content Include="Lib\Common.dll" />
+    <Content Include="Lib\SalesForceConnector.dll" />
+    <Content Include="Lib\Telerik.OpenAccess.dll" />
+    <Content Include="Lib\Telerik.Sitefinity.dll" />
+    <Content Include="Lib\Telerik.Sitefinity.Model.dll" />
+    <Content Include="Lib\Telerik.Sitefinity.Services.Events.dll" />
+    <Content Include="Lib\Telerik.Sitefinity.Utilities.dll" />
+    <Content Include="Lib\Telerik.Web.Design.dll" />
+    <Content Include="Lib\Telerik.Web.UI.dll" />
+    <Content Include="Lib\Telerik.Web.UI.Skins.dll" />
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
